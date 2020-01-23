@@ -240,7 +240,7 @@
         else if(focusedNodes.some(node => node == link.source) && focusedNodes.some(node => node == link.target)) 
           opacity = 1.0;
         else if(linkHighlighted)
-          opacity = 0.5;
+          opacity = 0.69; //nice
         else if(focusedNodes.some(node => node == link.source || node == link.target)) {
           if(highlightNode != null && focusedNodes.indexOf(highlightNode.id) == -1)
             opacity = 0.1;
