@@ -50,6 +50,20 @@
     color: white;
   }
 
+  .disclaimer {
+    display: block;
+    font-size: 12px;
+
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    max-width: 250px;
+    
+    z-index: 999;
+
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   th {
     padding: 8px 0px;
     font-size: 20px;
@@ -87,8 +101,13 @@
   .g5 {
     background: #D02128;
   }
+
+  a:link, a:visited, a:active, a:hover {
+    color: #006CB4;
+  }
   </style>
 
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>-->
   <script src="https://kit.fontawesome.com/0b92e81c6b.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/force-graph"></script>
 </head>
@@ -98,6 +117,17 @@
   <div class="title">
     <h1>cocktail</h1>
     <small>The interactive guide to drug combinations</small>
+  </div>
+
+  <!--
+  <script>
+    const gui = new dat.GUI();
+  </script>
+  -->
+
+  <div class="disclaimer">
+    <small>Information Source: <a href="https://wiki.tripsit.me/wiki/Drug_combinations">https://wiki.tripsit.me/wiki/Drug_combinations</a></small>
+    <b>WARNING! This site only shows individual interactions which shouldn't be used to gauge the safety of combinations of 3 or more. The site is intended to be a fun visualization, please don't use this site as a primary source and ALWAYS do additional research as the information here may be outdated or inaccurate.</b>
   </div>
 
   <table class="legend">
