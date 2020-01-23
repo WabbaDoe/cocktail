@@ -127,7 +127,7 @@
 
   <div class="disclaimer">
     <small>Information Source: <a href="https://wiki.tripsit.me/wiki/Drug_combinations">https://wiki.tripsit.me/wiki/Drug_combinations</a></small>
-    <b>WARNING! This site only shows individual interactions which shouldn't be used to gauge the safety of combinations of 3 or more. The site is intended to be a fun visualization, please don't use this site as a primary source and ALWAYS do additional research as the information here may be outdated or inaccurate.</b>
+    <b>WARNING! This site only shows individual interactions which shouldn't be used to gauge the safety of combinations of 3 or more. The site is intended to be a quick visualization, please don't use this site as a primary source and ALWAYS do additional research as the information here may be outdated or inaccurate.</b>
   </div>
 
   <table class="legend">
@@ -231,7 +231,7 @@
         });
       }, 100);
 
-      function getLinkOpacity(link) {
+      function getLinkOpacity(link) { //oof
         const linkHighlighted = highlightNode == link.source || highlightNode == link.target;
         let opacity = .1;
 
@@ -240,12 +240,12 @@
         else if(focusedNodes.some(node => node == link.source) && focusedNodes.some(node => node == link.target)) 
           opacity = 1.0;
         else if(linkHighlighted)
-          opacity = 0.69; //nice
+          opacity = 0.4;
         else if(focusedNodes.some(node => node == link.source || node == link.target)) {
           if(highlightNode != null && focusedNodes.indexOf(highlightNode.id) == -1)
             opacity = 0.1;
           else
-            opacity = focusedNodes.length == 1 ? 0.5 : 0.1;
+            opacity = focusedNodes.length == 1 ? 0.4 : 0.1;
         } else if(focusedNodes.length > 1)
           opacity = 0;
         link.opacity = opacity;
