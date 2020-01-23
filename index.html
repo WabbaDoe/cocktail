@@ -303,7 +303,7 @@
           const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.25); // some padding
           const focused = highlightNode == node || focusedNodes.indexOf(node) != -1;
 
-          ctx.globalAlpha = focused ? 1 : 0.6;
+          ctx.globalAlpha = focused ? 1 : 0.25;
 
           ctx.fillStyle = node.fill;
           ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
